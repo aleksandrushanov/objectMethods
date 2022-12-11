@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Book {
-    private String name;
-    private Author authorName;
-    private int yearOfPublication;
+    private final String name;
+    private final Author authorName;
+    private final int  yearOfPublication;
 
     public Book(String name, Author authorName, int yearOfPublication) {
         this.name = name;
@@ -13,9 +13,6 @@ public class Book {
     public String getName(){
         return name;
     }
-    public Author getAuthorName() {
-        return authorName;
-    }
 
     public int getYearOfPublication() {
         return yearOfPublication;
@@ -23,11 +20,10 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Название{" +
-                "книги ='" + name + '\'' +
-                ", имя автора=" + authorName +
-                ", год выпуска =" + yearOfPublication +
-                '}';
+        return "Название " +
+                "книги : " + name + " " +
+                ", имя автора: " + authorName +
+                ", год выпуска: " + yearOfPublication;
     }
 
     @Override
